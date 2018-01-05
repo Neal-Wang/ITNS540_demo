@@ -1,6 +1,6 @@
 name 'ITNS540_demo'
-maintainer 'The Authors'
-maintainer_email 'you@example.com'
+maintainer 'Qiulin Wang'
+maintainer_email 'wangql.dev@gmail.com'
 license 'All Rights Reserved'
 description 'Installs/Configures ITNS540_demo'
 long_description 'Installs/Configures ITNS540_demo'
@@ -18,3 +18,5 @@ chef_version '>= 12.1' if respond_to?(:chef_version)
 # a Supermarket.
 #
 # source_url 'https://github.com/<insert_org_here>/ITNS540_demo'
+
+depends 'java', '~> 1.50.0'
