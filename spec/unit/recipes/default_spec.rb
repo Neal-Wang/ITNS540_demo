@@ -18,5 +18,9 @@ describe 'ITNS540_demo::default' do
     it 'converges successfully' do
       expect { chef_run }.to_not raise_error
     end
+
+    it 'installs java 8' do
+      stub_command('java -version | grep 1.8').and_return(true)
+    end
   end
 end
