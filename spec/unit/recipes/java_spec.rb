@@ -18,5 +18,13 @@ describe 'ITNS540_demo::java' do
     it 'converges successfully' do
       expect { chef_run }.to_not raise_error
     end
+
+    it 'includes recipe java' do
+      expect(chef_run).to include_recipe('java::default')
+    end
+
+    it 'installs java 8' do
+      stub_command('java -version | grep 1.8').and_return(true)
+    end
   end
 end
